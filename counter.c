@@ -15,6 +15,8 @@ void Counter_init(Counter *self, int start, int end, int step) {
 
 Counter* Counter_new(int start, int end, int step) {
     Counter *result = (Counter*)malloc(sizeof(Counter));
+    //Counter *result = (Counter*)malloc(sizeof(*result));
+    //printf("COUNTER SIZE: %lu RESULT SIZE: %lu\n", sizeof (Counter), sizeof (*result));
     if(result != NULL) {
         Counter_init(result, start, end, step);
     }
